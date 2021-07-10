@@ -8,6 +8,9 @@
   },
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": "10.15.3"
+  },
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-autoprefixer": "^3.0.4",
