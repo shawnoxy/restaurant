@@ -1,0 +1,29 @@
+<form style="margin-top: 20px" action="/admin/posts" method="post">
+    <div class="form-group">
+        <label for="title">Post Title</label>
+        <input value="Hello" required type="text" class="form-control" name="post_title">
+    </div>    
+    <div class="form-group">
+        <label for="post_author">Post Author</label>
+        <input required type="text" class="form-control" name="post_author">
+    </div>
+    <div class="form-group">
+        <label for="title">Post Category</label>
+        <select name="post_category" class="form-control">            
+            <% categories.forEach(cat => { %>
+                <option value="<%= cat.title %>"><%= cat.title %></option>
+            <% }) %>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="post_image">Post Image</label>
+        <input type="file" class="form-control" name="post_image">
+    </div>
+    <div class="form-group">
+        <label for="post_content">Post Content</label>
+        <textarea type="text" class="form-control" name="post_content" id="body" cols="30" rows="10"></textarea>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary" name="add_post">Publish Post</button>
+    </div>
+</form>

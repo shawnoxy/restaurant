@@ -1,0 +1,31 @@
+<form style="margin-top: 20px" action="/admin/posts/update/<%= post._id %>" method="post">
+    <div class="form-group">
+        <label for="title">Post Title</label>
+        <input required type="text" value="<%= post.title %>" class="form-control" name="post_title">
+    </div>    
+    <div class="form-group">
+        <label for="post_author">Post Author</label>
+        <input required value="<%= post.author %>" type="text" class="form-control" name="post_author">
+    </div>
+    <div class="form-group">
+        <label for="title">Post Category</label>
+        <select name="post_category" class="form-control">
+            <option value="Vegan">Vegan</option>
+            <option value="Meat">Meat</option>
+            <option value="Tips and Tricks">Tips and Tricks</option>
+            <option value="Entertainment">Entertainment</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="post_image">Post Image</label><br>
+        <img style="width: 100px; height: 50px" src="..\img\blog\<%= post.image %>"/>
+        <input type="file" value="<%= post.image %>" class="form-control" name="post_image">
+    </div>
+    <div class="form-group">
+        <label for="post_content">Post Content</label>
+        <textarea type="text" class="form-control" name="post_content" id="body" cols="30" rows="10"><%= post.content %></textarea>
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary" name="edit_post" value="Edit Post">
+    </div>
+</form>
