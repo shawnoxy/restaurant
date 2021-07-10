@@ -1,0 +1,44 @@
+<%- include('includes/header') -%>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <%- include('includes/nav') -%>
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Blank Page
+                            <small>Subheading</small>
+                        </h1>
+                        <% if (option == 'view_all_posts') { %>
+                            <%- include('includes/view_all_posts') -%>
+                        <% } else if (option == 'add_post') { %>
+                            <%- include('includes/add_post') -%>
+                        <% } else if (option == 'edit_post') { %>
+                            <%- include('includes/edit_post') -%>
+                        <% } %>
+                        
+                        
+                    </div>
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <%- include('includes/footer') -%>

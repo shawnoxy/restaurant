@@ -1,0 +1,45 @@
+<%- include('includes/header') -%>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <%- include('includes/nav') -%>
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        
+                        <% if (option == 'breakfast') { %>
+                            <%- include('includes/breakfast') -%>
+                        <% } else if (option == 'brunch') { %>
+                            <%- include('includes/brunch') -%>
+                        <% } else if (option == 'lunch') { %>
+                            <%- include('includes/lunch') -%>
+                        <% } else if (option == 'dinner') { %>
+                            <%- include('includes/dinner') -%>
+                        <% } else if (option == 'add_menu_item') { -%>
+                            <%- include('includes/add_menu_item') -%>
+                        <% } %>
+                        
+                        
+                    </div>
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <%- include('includes/footer') -%>

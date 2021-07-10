@@ -1,0 +1,124 @@
+<%- include('includes/header') -%>
+  <body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Header section -->
+    <%- include('includes/nav') -%>
+    <!-- Header section end -->
+
+    <!-- Page info section -->
+    <section class="page-top-info set-bg" data-setbg="img/page-top-bg/3.jpg">
+      <div class="ptf-center">
+        <div class="container">
+          <h2>The blog<span>.</span></h2>
+        </div>
+      </div>
+    </section>
+    <!-- Page info section end -->
+
+    <!-- Blog section -->
+    <section class="blog-section spad">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 col-lg-8">
+            <!-- blog item -->            
+            <% posts.forEach(post => { %>
+              <div class="blog-item">
+                <div style="margin-bottom: 10px;" class="blog-thumb set-bg" data-setbg="img/blog/1.jpg">
+                  <div class="blog-date">
+                    <%= post.date %>
+                  </div>
+                </div>
+                <p style="text-align: center;"><strong style='color: black'>Category:</strong> <a href="#" style="color: #919191;"><%= post.category %></a></p>
+                <div class="blog-content">
+                  <h3><%= post.title %></h3>
+                  <div class="blog-meta"><%= post.author %></div>
+                  <p>
+                    <%= post.content %>
+                  </p>
+                </div>
+              </div>
+            <% }) %>
+            <div class="site-pagination">
+              <a href="#" class="active">01.</a>
+              <a href="#">02.</a>
+              <a href="#">03.</a>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 sidebar">
+            <div class="sb-widget">
+              <form class="sb-search">
+                <input type="text" placeholder="Search" />
+                <button><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+            <div class="sb-widget">
+              <h5 class="sbw-title">Categories</h5>
+              <ul>                
+                <% categories.forEach(cat => { %>
+                  <li>
+                    <a href=""><%= cat.title %> <span>20</span></a>
+                  </li>
+                <% }) %>
+              </ul>
+            </div>
+            <div class="sb-widget">
+              <h5 class="sbw-title">Latest Posts</h5>
+              <div class="latest-posts-widget">
+                <div class="lp-item">
+                  <div
+                    class="lp-thumb set-bg"
+                    data-setbg="img/blog/thumb/1.jpg"
+                  ></div>
+                  <div class="lp-content">
+                    <span>July 22, 2018</span>
+                    <h6>10 tips for a meal</h6>
+                    <p>By William Smith</p>
+                  </div>
+                </div>
+                <div class="lp-item">
+                  <div
+                    class="lp-thumb set-bg"
+                    data-setbg="img/blog/thumb/2.jpg"
+                  ></div>
+                  <div class="lp-content">
+                    <span>July 22, 2018</span>
+                    <h6>Vegetarian food for all</h6>
+                    <p>By William Smith</p>
+                  </div>
+                </div>
+                <div class="lp-item">
+                  <div
+                    class="lp-thumb set-bg"
+                    data-setbg="img/blog/thumb/3.jpg"
+                  ></div>
+                  <div class="lp-content">
+                    <span>July 22, 2018</span>
+                    <h6>How to cook a meal?</h6>
+                    <p>By William Smith</p>
+                  </div>
+                </div>
+                <div class="lp-item">
+                  <div
+                    class="lp-thumb set-bg"
+                    data-setbg="img/blog/thumb/4.jpg"
+                  ></div>
+                  <div class="lp-content">
+                    <span>July 22, 2018</span>
+                    <h6>Pizza recipe for all</h6>
+                    <p>By William Smith</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Blog section end -->
+
+    <!-- Footer section -->
+    <%- include('includes/footer') -%>

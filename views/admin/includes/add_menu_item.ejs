@@ -1,0 +1,19 @@
+<h1>Add Item</h1>
+<form style="margin-top: 20px" action="/admin/menu" method="post">
+    <div class="form-group">
+        <label for="title">Name</label>
+        <input value="" required type="text" class="form-control" name="item_name">
+    </div>    
+    <div class="form-group">
+        <label for="post_author">Side</label>
+        <input required type="text" class="form-control" name="side">
+    </div>
+    <div class="form-group">
+        <label for="post_author">Price</label>
+        <input required type="text" class="form-control" name="price">
+    </div>
+    <input type="hidden" name="meal" value="<%= meal %>">
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary" name="add_item">Add Item</button>
+    </div>
+</form>
